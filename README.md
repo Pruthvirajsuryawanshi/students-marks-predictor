@@ -33,7 +33,7 @@ Dual-core CPU or higher
  
 **Usage**
 1.Clone the repository:
- git clone https://github.com/pruthvii2109/student-marks-predictor.git
+ git clone https://github.com/Pruthvirajsuryawanshi/students-marks-predictor.git
  Open student_marks_predictor.ipynb in Jupyter Notebook or VS Code.
 2.Run the notebook cells sequentially.
 3.Input the number of courses and hours studied to get predicted marks:
