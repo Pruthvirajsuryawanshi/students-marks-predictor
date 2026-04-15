@@ -34,10 +34,21 @@ Dual-core CPU or higher
 **Usage**
 1.Clone the repository:
  git clone https://github.com/Pruthvirajsuryawanshi/students-marks-predictor.git
- Open student_marks_predictor.ipynb in Jupyter Notebook or VS Code.
+ Open `student_marks_predictor.ipynb` in Jupyter Notebook or VS Code.
 2.Run the notebook cells sequentially.
 3.Input the number of courses and hours studied to get predicted marks:
 
 courses = 3
 hours = 5.5
+
+**Run the website form**
+1.Install required packages:
+ ```bash
+ pip install -r requirements.txt
+ ```
+2.Run the Streamlit app:
+ ```bash
+ streamlit run app.py
+ ```
+3.Open the local URL displayed by Streamlit in your browser.
  
