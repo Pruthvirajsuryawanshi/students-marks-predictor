@@ -1,0 +1,194 @@
+/*
+  Premium, modern UI for Student Marks Predictor
+  Uses CSS variables for dark/light themes, subtle gradients, and smooth transitions.
+*/
+:root {
+  --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-color: #f0f0f0;
+  --accent: #ffb400;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: var(--bg-gradient);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.intro {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent);
+}
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.chart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-table th,
+.data-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+.data-table th {
+  background: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  color: var(--accent);
+}
+.data-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer {
+  background: rgba(0,0,0,0.3);
+  color: var(--text-color);
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Hover Effects */
+button, a {
+  transition: color 0.3s, transform 0.3s;
+}
+button:hover, a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main.container {
+    width: 95%;
+    gap: 1rem;
+  }
+}
+/* Predictor Card */
+.predictor {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 360px;
+  margin: 3rem auto;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: fadeIn 0.6s ease-out;
+}
+.predictor h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.predictor label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.predictor input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.predictor .btn-primary {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.predictor .prediction-output {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+}

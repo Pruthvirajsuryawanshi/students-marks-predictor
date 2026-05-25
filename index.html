@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Marks Predictor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo"><i class="fa-solid fa-graduation-cap"></i> Student Marks Predictor</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="intro">
+      <h2>Predict Academic Performance</h2>
+      <p>Enter the number of courses a student is taking and the total study hours per week. The model, trained on historical data, will instantly predict the expected marks.</p>
+    </section>
+
+    <section class="predictor">
+      <h2>Enter Student Data</h2>
+      <label># Courses
+        <input type="number" id="inputCourses" min="0" step="1" placeholder="e.g., 4" />
+      </label>
+      <label>Study Hours
+        <input type="number" id="inputStudy" min="0" step="0.01" placeholder="e.g., 5.2" />
+      </label>
+      <button id="predictBtn" class="btn-primary">Predict</button>
+      <p id="predictionResult" class="prediction-output"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Pruthviraj Suryawanshi • Built with passion for data‑driven education.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
